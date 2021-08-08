@@ -1,0 +1,11 @@
+Ext.define('Vidly.model.genre',{
+    extend:'iRely.BaseEntity',
+    requires:[
+        'Ext.data.Field'
+    ],
+    idProperty:'intGenreId',
+    fields:[        
+        {name:'intGenreId',type:'int'},
+        {name:'strGenreName',type:'string'},
+    ]
+})

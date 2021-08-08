@@ -1,0 +1,20 @@
+Ext.define('Vidly.store.genre',{
+    extend:'Ext.data.Store',
+    requires:[
+        'Vidly.model.genre'
+    ],
+    model:'Vidly.model.genre',
+    storeId:'GenreId',
+    batchActions:true,
+    proxy:{
+        type:'rest',
+        api:{
+            read:'./vidly/api/genre/get',
+        },
+        reader:{
+            type:'json',
+            rootProperty:'data',
+            messageProperty:'message'
+        },
+    }
+})

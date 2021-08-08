@@ -1,0 +1,21 @@
+Ext.define('Vidly.store.membershipType',{
+    extend:'Ext.data.Store',
+    alias:'cmbMembeshipType',
+    requires:[
+        'Vidly.model.membershipType'
+    ],
+    model:'Vidly.model.membershipType',
+    storeId:'MembeshipTypeId',
+    batchActions:true,
+    proxy:{
+        type:'rest',
+        api:{
+            read:'./vidly/api/membershiptype/get',
+        },
+        reader:{
+            type:'json',
+            rootProperty:'data',
+            messageProperty:'message'
+        },
+    }
+})

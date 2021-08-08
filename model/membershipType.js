@@ -1,0 +1,12 @@
+Ext.define('Vidly.model.membershipType',{
+    extend:'iRely.BaseEntity',
+    requires:[
+        'Ext.data.Field'
+    ],
+    idProperty:'intMembershipTypeId',
+    fields:[        
+        {name:'intMembeshipTypeId',type:'int'},
+        {name:'strMembershipName',type:'string'},
+    ],
+    autoLoad:true
+})
